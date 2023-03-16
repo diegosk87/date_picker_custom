@@ -103,7 +103,7 @@ const double _inputFormLandscapeHeight = 108.0;
 ///
 /// See also:
 ///
-///  * [showDateRangePicker], which shows a Material Design date range picker
+///  * [showDateRangePickerCustom], which shows a Material Design date range picker
 ///    used to select a range of dates.
 ///  * [CalendarDatePicker], which provides the calendar grid used by the date picker dialog.
 ///  * [InputDatePickerFormField], which provides a text input field for entering dates.
@@ -111,7 +111,7 @@ const double _inputFormLandscapeHeight = 108.0;
 ///    [DisplayFeature]s can split the screen into sub-screens.
 ///  * [showTimePicker], which shows a dialog that contains a Material Design time picker.
 ///
-Future<DateTime?> showDatePicker({
+Future<DateTime?> showDatePickerCustom({
   required BuildContext context,
   required DateTime initialDate,
   required DateTime firstDate,
@@ -209,13 +209,13 @@ Future<DateTime?> showDatePicker({
 
 /// A Material-style date picker dialog.
 ///
-/// It is used internally by [showDatePicker] or can be directly pushed
+/// It is used internally by [showDatePickerCustom] or can be directly pushed
 /// onto the [Navigator] stack to enable state restoration. See
-/// [showDatePicker] for a state restoration app example.
+/// [showDatePickerCustom] for a state restoration app example.
 ///
 /// See also:
 ///
-///  * [showDatePicker], which is a way to display the date picker.
+///  * [showDatePickerCustom], which is a way to display the date picker.
 class DatePickerDialog extends StatefulWidget {
   /// A Material-style date picker dialog.
   DatePickerDialog({
@@ -912,12 +912,12 @@ class _DatePickerHeader extends StatelessWidget {
 ///
 /// See also:
 ///
-///  * [showDatePicker], which shows a Material Design date picker used to
+///  * [showDatePickerCustom], which shows a Material Design date picker used to
 ///    select a single date.
 ///  * [DateTimeRange], which is used to describe a date range.
 ///  * [DisplayFeatureSubScreen], which documents the specifics of how
 ///    [DisplayFeature]s can split the screen into sub-screens.
-Future<DateTimeRange?> showDateRangePicker({
+Future<DateTimeRange?> showDateRangePickerCustom({
   required BuildContext context,
   DateTimeRange? initialDateRange,
   required DateTime firstDate,
@@ -1061,13 +1061,13 @@ String _formatRangeEndDate(MaterialLocalizations localizations, DateTime? startD
 
 /// A Material-style date range picker dialog.
 ///
-/// It is used internally by [showDateRangePicker] or can be directly pushed
+/// It is used internally by [showDateRangePickerCustom] or can be directly pushed
 /// onto the [Navigator] stack to enable state restoration. See
-/// [showDateRangePicker] for a state restoration app example.
+/// [showDateRangePickerCustom] for a state restoration app example.
 ///
 /// See also:
 ///
-///  * [showDateRangePicker], which is a way to display the date picker.
+///  * [showDateRangePickerCustom], which is a way to display the date picker.
 class DateRangePickerDialog extends StatefulWidget {
   /// A Material-style date range picker dialog.
   const DateRangePickerDialog({
